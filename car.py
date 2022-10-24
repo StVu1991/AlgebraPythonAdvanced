@@ -3,6 +3,7 @@ class Car:
     wheels = 4
     pass
 
+
 car1 = Car()
 car2 = Car()
 
