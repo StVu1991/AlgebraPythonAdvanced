@@ -55,7 +55,7 @@ class Application(Frame):
         line += 1
         self.btn_reset = Button(self, text="Reset")
         self.btn_reset.grid(row=line, column=0)
-        self.btn_calculate_price = Button(self, text="Calculate price", command=self.reset)
+        self.btn_calculate_price = Button(self, text="Calculate price", command=self.calculate_price)
         self.btn_calculate_price.grid(row=line, column=1)
 
         line += 1
@@ -71,7 +71,7 @@ class Application(Frame):
             if self.checkboxesVars[i].get():
                 self.total_toppings += 1
 
-        self.price = self.prices[self.rb_size_value.get()] + (self.total_toppings + self.prices[self.rb_size_value.get() + " - toppings"])
+        self.price = self.prices[self.rb_size_value.get()] + (self.total_toppings + self.prices[self.rb_size_value.get() + "-toppings"])
         self.entry_total_price.delete(0, END)
         self.entry_total_price.insert(END, f"{self.price:.2f}")
 
